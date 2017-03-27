@@ -69,7 +69,24 @@ end
   - The data always lives on the belongs_to relationship
   - Do the belongs_to first, then do the has_many
   - If there is a many to many, we need a third table
-  - We've provided you with a `console.rb` file and a `seeds.rb` file. You can run `ruby tools/seeds.rb` to add some data to your database, and then `ruby tools/console.rb` to interact with your Ruby classes.
+  - We've provided you with a `console.rb` file and a `seed.rb` file. You can run `ruby tools/seed.rb` to add some data to your database, and then `ruby tools/console.rb` to interact with your Ruby classes.
 
 
 #### Write your domain model here:
+    ### restaurants
+    id | name | location | restaurant_ownerships
+
+    ### owners
+    id | name | restaurant_ownerships_id
+
+    ### restaurant_ownerships
+    id | owner_id | restaurant_id
+
+    ### customers
+    id | name | birth_year | hometown | customer_reviews_id
+
+    ### reviews
+    id | name | restaurant_id | customer_reviews_id
+
+    ### customer_reviews
+    id | customer_id | reviews_id
