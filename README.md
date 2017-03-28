@@ -74,19 +74,13 @@ end
 
 #### Write your domain model here:
     ### restaurants
-    id | name | location | restaurant_ownerships
+    id | name | location | owner_id
 
     ### owners
-    id | name | restaurant_ownerships_id
-
-    ### restaurant_ownerships
-    id | owner_id | restaurant_id
+    id | name |
 
     ### customers
-    id | name | birth_year | hometown | customer_reviews_id
+    id | name | birth_year | hometown
 
     ### reviews
-    id | name | restaurant_id | customer_reviews_id
-
-    ### customer_reviews
-    id | customer_id | reviews_id
+    id | name | restaurant_id | customer_id
